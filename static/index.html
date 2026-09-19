@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GloweUp Studio · Plan a ritual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #f4ebe1;
+      --paper-2: #eadfce;
+      --ink: #241c18;
+      --muted: #6d5e55;
+      --sage: #3d5a4c;
+      --sage-2: #2f463c;
+      --blush: #c4786a;
+      --blush-2: #e8b4a8;
+      --card: #fffaf4;
+      --line: rgba(36, 28, 24, 0.1);
+      --shadow: 0 18px 40px rgba(61, 45, 36, 0.08);
+    }
+    * { box-sizing: border-box; scrollbar-width: none; -ms-overflow-style: none; }
+    *::-webkit-scrollbar { width: 0; height: 0; display: none; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: Outfit, system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      overflow: hidden;
+    }
+    .layout {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+      height: 100dvh;
+      min-width: 0;
+      overflow: hidden;
+    }
+    .blobs {
+      position: fixed; inset: -20%;
+      background:
+        radial-gradient(900px 520px at 8% 0%, #f0d9c8 0%, transparent 55%),
+        radial-gradient(800px 480px at 100% 8%, #d5e4d8 0%, transparent 50%),
+        radial-gradient(600px 400px at 70% 100%, #f3d3c8 0%, transparent 45%);
+      animation: drift 22s ease-in-out infinite alternate;
+      pointer-events: none;
+      z-index: 0;
+    }
+    @keyframes drift {
+      from { transform: translate3d(0, 0, 0) scale(1); }
+      to { transform: translate3d(-2%, 1.5%, 0) scale(1.05); }
+    }
+    .shell {
+      max-width: 880px;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 22px 18px 12px;
+      min-width: 0;
+      overflow: hidden;
+    }
+    #chat {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    #chat[hidden] { display: none !important; }
+    #detail {
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 12px 2px 16px;
+    }
+    #detail[hidden] { display: none !important; }
+    .sidebar {
+      overflow-y: auto;
+      min-width: 0;
+      padding: 20px 16px 16px;
+      border-right: 1px solid var(--line);
+      background: color-mix(in srgb, var(--card) 70%, transparent);
+      backdrop-filter: blur(12px);
+    }
+    .sidebar h2 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 28px;
+      font-style: italic;
+      font-weight: 500;
+      margin: 0 0 4px;
+    }
+    .sidebar .lede {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0 0 16px;
+      line-height: 1.4;
+    }
+    .plan-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px;
+      margin-bottom: 10px;
+      animation: rise 0.35s ease both;
+      cursor: pointer;
+      text-align: left;
+      width: 100%;
+      font: inherit;
+      color: inherit;
+      transition: transform 0.2s cubic-bezier(.2,1.2,.3,1), box-shadow 0.2s;
+    }
+    .plan-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .plan-card header {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      border: 0;
+      padding: 0;
+    }
+    .plan-card img {
+      width: 44px; height: 44px; border-radius: 10px; object-fit: cover; background: var(--paper-2);
+    }
+    .plan-card h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 18px;
+      margin: 0;
+      line-height: 1.15;
+    }
+    .plan-card .desc {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 2px 0 0;
+      line-height: 1.35;
+    }
+    .plan-card .meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .plan-card .streak-mini {
+      color: var(--blush);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+    .plan-card .drop {
+      font: inherit; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+      border: 0; background: transparent; color: var(--muted); cursor: pointer;
+    }
+    .plan-card .drop:hover { color: var(--blush); }
+    .detail-back {
+      font: inherit; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+      border: 0; background: transparent; color: var(--sage); cursor: pointer;
+      padding: 0 0 10px;
+    }
+    .ring-wrap {
+      display: flex; align-items: center; flex-wrap: wrap; gap: 14px;
+      margin: 8px 0 16px;
+    }
+    .ring {
+      width: 88px; height: 88px; transform: rotate(-90deg);
+    }
+    .ring circle { fill: none; stroke-width: 7; }
+    .ring .track { stroke: var(--paper-2); }
+    .ring .arc {
+      stroke: var(--sage);
+      stroke-linecap: round;
+      transition: stroke-dashoffset 0.6s cubic-bezier(.2,1,.3,1);
+    }
+    .ring.burst { animation: pop 0.45s cubic-bezier(.2,1.5,.3,1); }
+    .ring-copy strong {
+      display: block;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 28px;
+      font-style: italic;
+      line-height: 1;
+    }
+    .ring-copy span { font-size: 12px; color: var(--muted); }
+    .ring-copy .hot {
+      color: var(--blush);
+      font-weight: 500;
+      animation: pop 0.4s cubic-bezier(.2,1.5,.3,1);
+    }
+    .week {
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 4px;
+      margin: 0 0 16px;
+    }
+    .day-dot {
+      flex: 1 1 36px;
+      min-width: 36px;
+      max-width: 56px;
+      font: inherit;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      padding: 0;
+      color: var(--muted);
+    }
+    .day-dot i {
+      display: grid; place-items: center;
+      width: 100%; aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--paper-2);
+      font-size: 11px;
+      font-style: normal;
+      color: var(--ink);
+      margin-bottom: 4px;
+      transition: transform 0.2s cubic-bezier(.2,1.4,.3,1), background 0.2s, color 0.2s;
+    }
+    .day-dot small { font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; }
+    .day-dot.partial i { background: var(--blush-2); }
+    .day-dot.full i { background: var(--sage); color: #f7f3ec; animation: pop 0.35s cubic-bezier(.2,1.4,.3,1); }
+    .day-dot.today i { box-shadow: 0 0 0 2px var(--card), 0 0 0 3px var(--blush); }
+    .day-dot.on i { transform: scale(1.08); }
+    .day-dot.soon { opacity: 0.42; cursor: default; }
+    .detail-steps .step {
+      padding: 10px 0 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .detail-steps .step:last-child { border-bottom: 0; }
+    .detail-steps .q {
+      display: block;
+      font-size: 13px;
+      margin: 0 0 8px;
+      line-height: 1.35;
+    }
+    .picks { display: flex; flex-wrap: wrap; gap: 8px; }
+    .picks.slide { justify-content: space-between; }
+    .pick {
+      font: inherit;
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 999px;
+      padding: 8px 12px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.2s cubic-bezier(.2,1.4,.3,1), background 0.2s, border-color 0.2s;
+    }
+    .picks.slide .pick { flex: 1; justify-content: center; padding: 10px 6px; min-width: 0; }
+    .pick b { font-size: 20px; font-weight: 400; line-height: 1; }
+    .pick small { font-size: 11px; color: var(--muted); }
+    .pick.on {
+      background: var(--sage);
+      border-color: var(--sage);
+      color: #f7f3ec;
+      transform: scale(1.08);
+    }
+    .pick.on small { color: #d7e4db; }
+    .pick:disabled { opacity: 0.45; cursor: default; transform: none; }
+    .detail-steps .locked { opacity: 0.7; }
+    .spark {
+      position: fixed; width: 8px; height: 8px; border-radius: 50%;
+      background: var(--blush); pointer-events: none;
+      animation: spark 0.7s ease forwards;
+      z-index: 40;
+    }
+    @keyframes spark {
+      to { transform: translate(var(--dx), var(--dy)) scale(0.2); opacity: 0; }
+    }
+    .plans-empty { font-size: 13px; color: var(--muted); line-height: 1.45; }
+    .chat-toggle, .plans-toggle {
+      font: inherit; font-size: 12px;
+      border: 1px solid var(--line); background: var(--card);
+      border-radius: 999px; padding: 6px 12px; cursor: pointer;
+    }
+    .chat-toggle { display: inline-flex; }
+    .chat-toggle[hidden] { display: none !important; }
+    .plans-toggle { display: none; }
+    .header-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+    .header-actions .nav-btns { display: flex; gap: 8px; }
+    .scrim {
+      display: none; position: fixed; inset: 0; background: rgba(36,28,24,0.25); z-index: 15;
+    }
+    .celebrate {
+      position: fixed; inset: 0; z-index: 50;
+      display: grid; place-items: center;
+      padding: 20px;
+      background: rgba(36,28,24,0.28);
+    }
+    .celebrate[hidden] { display: none !important; }
+    .celebrate-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 28px 22px 20px;
+      max-width: 280px;
+      width: 100%;
+      text-align: center;
+      box-shadow: var(--shadow);
+      animation: pop 0.42s cubic-bezier(.2,1.4,.3,1);
+    }
+    .celebrate-card strong {
+      display: block;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 32px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.1;
+    }
+    .celebrate-card p {
+      margin: 8px 0 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .celebrate-card button {
+      font: inherit; font-size: 13px;
+      border: 0; border-radius: 999px;
+      background: var(--sage); color: #f7f3ec;
+      padding: 10px 18px; cursor: pointer;
+    }
+    .start-plan {
+      font: inherit; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
+      border: 0; background: transparent; color: var(--blush); cursor: pointer; padding: 0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 12px;
+    }
+    .mark {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 12px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin: 0 0 4px;
+    }
+    h1 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(32px, 5vw, 44px);
+      font-style: italic;
+      line-height: 0.95;
+      margin: 0;
+    }
+    .mood {
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 220px;
+      text-align: right;
+      line-height: 1.35;
+    }
+    .tiles {
+      display: flex;
+      gap: 8px;
+      padding: 16px 0 10px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .tiles::-webkit-scrollbar { display: none; }
+    .tile {
+      flex: 0 0 156px;
+      font: inherit;
+      text-align: left;
+      background: color-mix(in srgb, var(--card) 82%, transparent);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 12px 12px 14px;
+      cursor: pointer;
+      box-shadow: 0 0 0 rgba(0,0,0,0);
+      transition: transform 0.22s cubic-bezier(.2,1.2,.3,1), box-shadow 0.22s, border-color 0.22s, background 0.22s;
+    }
+    .tile:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: color-mix(in srgb, var(--sage) 35%, var(--line));
+      background: var(--card);
+    }
+    .tile:active { transform: scale(0.97); }
+    .tile.on {
+      background: var(--sage);
+      color: #f7f3ec;
+      border-color: var(--sage);
+    }
+    .tile.on .kicker, .tile.on .sub { color: #d7e4db; }
+    .kicker {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--blush);
+      margin-bottom: 4px;
+    }
+    .tile strong {
+      display: block;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.1;
+    }
+    .sub { display: block; font-size: 11px; color: var(--muted); margin-top: 4px; }
+    #log {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 6px 2px 12px;
+      scroll-behavior: smooth;
+    }
+    .welcome {
+      padding: 28px 8px 8px;
+      animation: rise 0.5s ease both;
+    }
+    .welcome p {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 28px;
+      font-style: italic;
+      margin: 0;
+      max-width: 18ch;
+      line-height: 1.15;
+    }
+    .welcome span { display: block; font-family: Outfit, sans-serif; font-size: 13px; font-style: normal; color: var(--muted); margin-top: 8px; }
+    .msg {
+      max-width: 86%;
+      padding: 12px 14px;
+      border-radius: 18px;
+      line-height: 1.5;
+      font-size: 15px;
+      animation: rise 0.35s ease both;
+    }
+    .msg.user {
+      align-self: flex-end;
+      background: var(--sage);
+      color: #f7f3ec;
+      border-bottom-right-radius: 6px;
+    }
+    .msg.assistant {
+      align-self: flex-start;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-bottom-left-radius: 6px;
+    }
+    .msg.error { color: #8b3a32; }
+    .kit-name {
+      align-self: flex-start;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 22px;
+      font-style: italic;
+      color: var(--sage-2);
+      animation: rise 0.4s ease 0.05s both;
+    }
+    .beats {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .beat {
+      display: grid;
+      grid-template-columns: 108px 1fr;
+      gap: 10px;
+      align-items: stretch;
+      animation: rise 0.45s cubic-bezier(.2,1.1,.3,1) both;
+    }
+    .beat:nth-child(1) { animation-delay: 0.05s; }
+    .beat:nth-child(2) { animation-delay: 0.12s; }
+    .beat:nth-child(3) { animation-delay: 0.19s; }
+    .when {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blush);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: right;
+      padding-right: 4px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      min-height: 92px;
+      box-shadow: 0 8px 24px rgba(61, 45, 36, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .card img { width: 92px; height: 100%; object-fit: cover; background: var(--paper-2); }
+    .meta { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .meta h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.15;
+    }
+    .why { font-size: 12px; color: var(--muted); line-height: 1.35; }
+    .row { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+    .price { font-size: 13px; color: var(--sage-2); font-weight: 500; }
+    .shop {
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .shop:hover { color: var(--blush); }
+    .heart {
+      margin-left: auto;
+      width: 36px; height: 36px;
+      border: 0; background: #f3e8de;
+      border-radius: 999px;
+      cursor: pointer;
+      color: var(--blush);
+      display: grid; place-items: center;
+      transition: transform 0.2s cubic-bezier(.2,1.4,.3,1), background 0.2s;
+    }
+    .heart:hover { transform: scale(1.08); }
+    .heart.on {
+      background: var(--blush);
+      color: #fff;
+      animation: pop 0.42s cubic-bezier(.2,1.5,.3,1);
+    }
+    .heart svg { width: 16px; height: 16px; fill: currentColor; }
+    @keyframes pop {
+      0% { transform: scale(0.7); }
+      55% { transform: scale(1.18); }
+      100% { transform: scale(1); }
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: none; }
+    }
+    .chips {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      animation: rise 0.35s ease 0.08s both;
+    }
+    .chip {
+      font: inherit; font-size: 13px;
+      padding: 8px 14px; border-radius: 999px;
+      border: 1px solid var(--line); background: var(--card);
+      color: var(--sage-2); cursor: pointer;
+      transition: transform 0.18s cubic-bezier(.2,1.2,.3,1), background 0.18s, color 0.18s, border-color 0.18s;
+    }
+    .chip:hover { transform: translateY(-2px); border-color: var(--sage); }
+    .chip:active { transform: scale(0.97); }
+    .chip:disabled { opacity: 0.45; cursor: default; transform: none; }
+    .typing {
+      display: flex; gap: 5px; align-items: center;
+      width: fit-content; padding: 14px 16px;
+    }
+    .typing i {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--sage); opacity: 0.35;
+      animation: bounce 1s infinite;
+      font-style: normal;
+    }
+    .typing i:nth-child(2) { animation-delay: 0.15s; }
+    .typing i:nth-child(3) { animation-delay: 0.3s; }
+    @keyframes bounce {
+      0%, 80%, 100% { transform: translateY(0); opacity: 0.35; }
+      40% { transform: translateY(-5px); opacity: 1; }
+    }
+    .ghost {
+      position: fixed; z-index: 40; pointer-events: none;
+      width: 44px; height: 44px; border-radius: 12px; object-fit: cover;
+      transition: transform 0.55s cubic-bezier(.2,.8,.2,1), opacity 0.55s;
+      box-shadow: var(--shadow);
+    }
+    .composer-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 4px;
+    }
+    .tray {
+      background: color-mix(in srgb, var(--card) 90%, transparent);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 64px;
+      box-shadow: var(--shadow);
+      animation: rise 0.4s ease both;
+    }
+    .tray.empty { opacity: 0.72; }
+    .tray-copy { flex: 1; min-width: 0; }
+    .tray-copy strong { display: block; font-size: 13px; }
+    .tray-copy span { font-size: 12px; color: var(--muted); }
+    .pins { display: flex; gap: 6px; }
+    .pins img {
+      width: 40px; height: 40px; border-radius: 12px; object-fit: cover;
+      border: 2px solid #fff; background: var(--paper-2);
+      animation: pop 0.35s ease;
+    }
+    .clear {
+      font: inherit; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+      border: 0; background: transparent; color: var(--muted); cursor: pointer;
+    }
+    .clear:hover { color: var(--blush); }
+    form { display: flex; gap: 8px; }
+    input[type="text"] {
+      flex: 1; font: inherit; font-size: 15px;
+      padding: 14px 16px; border-radius: 999px;
+      border: 1px solid var(--line); background: #fff; color: var(--ink); outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    input[type="text"]:focus { border-color: var(--sage); box-shadow: 0 0 0 4px rgba(61, 90, 76, 0.12); }
+    form button[type="submit"] {
+      font: inherit; font-size: 14px; padding: 0 18px;
+      border: 0; border-radius: 999px; background: var(--sage); color: #f7f3ec; cursor: pointer;
+      transition: transform 0.15s;
+    }
+    form button[type="submit"]:hover { transform: translateY(-1px); }
+    form button[type="submit"]:disabled { opacity: 0.55; cursor: wait; }
+    footer {
+      font-size: 11px; color: var(--muted); padding: 8px 2px 2px; line-height: 1.45;
+    }
+    footer a { color: var(--sage); }
+    @media (max-width: 960px) {
+      .layout { grid-template-columns: minmax(0, 1fr); }
+      .plans-toggle { display: inline-flex; }
+      .sidebar {
+        position: fixed; left: 0; top: 0; bottom: 0; width: min(320px, 88vw);
+        transform: translateX(-105%);
+        transition: transform 0.28s ease;
+        z-index: 20;
+        box-shadow: var(--shadow);
+      }
+      .sidebar.open { transform: none; }
+      .scrim.show { display: block; }
+    }
+    @media (max-width: 760px) {
+      .beat { grid-template-columns: 1fr; }
+      .when { justify-content: flex-start; text-align: left; }
+      .mood { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .blobs, .tile, .card, .heart, .msg, .beat, .kit-name, .welcome, .tray, .pins img, .plan-card, .ring, .day-dot i, .ring-copy .hot, .celebrate-card, .pick { animation: none; transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="blobs" aria-hidden="true"></div>
+  <div class="scrim" id="scrim"></div>
+  <div class="celebrate" id="celebrate" hidden>
+    <div class="celebrate-card" role="dialog" aria-modal="true" aria-labelledby="celebrateTitle">
+      <strong id="celebrateTitle">Streak started</strong>
+      <p>Today is done.</p>
+      <button type="button" id="celebrateOk">Keep going</button>
+    </div>
+  </div>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <h2>My plans</h2>
+      <p class="lede">Daily check-ins for whatever you started. Boxes reset tomorrow.</p>
+      <div id="plans"></div>
+    </aside>
+    <div class="shell" id="shell">
+    <header>
+      <div>
+        <p class="mark">GloweUp Studio</p>
+        <h1>Plan a ritual</h1>
+      </div>
+      <div class="header-actions">
+        <div class="nav-btns">
+          <button class="chat-toggle" id="chatToggle" type="button" hidden>Chat</button>
+          <button class="plans-toggle" id="plansToggle" type="button">Plans</button>
+        </div>
+        <p class="mood">A two-minute check-in. Then one hormone-safe pick — not a haul.</p>
+      </div>
+    </header>
+    <div id="chat">
+    <div class="tiles" id="tiles"></div>
+    <div id="log">
+      <div class="welcome" id="welcome">
+        <p>How’s your body tonight?</p>
+        <span>Mood, sleep, cycle — I’ll ask a couple things, then pick one product from the shop.</span>
+      </div>
+    </div>
+    <div class="composer-wrap">
+      <div class="tray empty" id="tray">
+        <div class="tray-copy">
+          <strong>My ritual</strong>
+          <span id="trayHint">Nothing pinned yet — finish the check-in.</span>
+        </div>
+        <div class="pins" id="pins"></div>
+        <button class="clear" id="clear" type="button" hidden>Clear</button>
+      </div>
+      <form id="form">
+        <input id="q" type="text" autocomplete="off" placeholder="How’s mood, sleep, this week of your cycle…" />
+        <button type="submit">Tell me</button>
+      </form>
+    </div>
+    </div>
+    <div id="detail" hidden></div>
+    <footer>
+      Shopping guidance from the live GloweUp catalog — not medical advice, not a diagnosis.
+      <a href="https://gloweupstudio.com/collections/all" target="_blank" rel="noreferrer">Shop the source</a>
+    </footer>
+  </div>
+  </div>
+  <script>
+    const occasions = [
+      { kicker: "Cycle", title: "Period-ish", sub: "this week", q: "Period-ish this week." },
+      { kicker: "Mood", title: "Mood's off", sub: "anxious or flat", q: "My mood's been off." },
+      { kicker: "Night", title: "Can't sleep", sub: "wired at 1am", q: "I can't sleep well." },
+      { kicker: "Skin", title: "Skin feels dull", sub: "dry, reactive", q: "My skin feels dull and dry." },
+      { kicker: "Day", title: "Low energy", sub: "afternoon slump", q: "Energy is low today." },
+    ];
+    const log = document.getElementById("log");
+    const form = document.getElementById("form");
+    const input = document.getElementById("q");
+    const tiles = document.getElementById("tiles");
+    const tray = document.getElementById("tray");
+    const pinsEl = document.getElementById("pins");
+    const trayHint = document.getElementById("trayHint");
+    const clearBtn = document.getElementById("clear");
+    const history = [];
+    const KEY = "gloweup-ritual";
+    const PLAN_KEY = "gloweup-plans";
+    let ritual = [];
+    let plans = [];
+    let lastPlan = null;
+    let openHandle = null;
+    let inspectDay = null;
+
+    try { ritual = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch { ritual = []; }
+    try { plans = JSON.parse(localStorage.getItem(PLAN_KEY) || "[]"); } catch { plans = []; }
+
+    const heartSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.7-4.35-9.33-8.22C.7 9.7 1.2 6.2 4.05 4.7c1.9-1 4.25-.45 5.7 1.2L12 8.2l2.25-2.3c1.45-1.65 3.8-2.2 5.7-1.2 2.85 1.5 3.35 5 1.38 8.08C18.7 16.65 12 21 12 21z"/></svg>';
+
+    occasions.forEach((o) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "tile";
+      b.innerHTML = `<span class="kicker">${o.kicker}</span><strong>${o.title}</strong><span class="sub">${o.sub}</span>`;
+      b.addEventListener("click", () => {
+        tiles.querySelectorAll(".tile").forEach((t) => t.classList.remove("on"));
+        b.classList.add("on");
+        history.length = 0;
+        send(o.q);
+      });
+      tiles.appendChild(b);
+    });
+
+    function today() { return new Date().toISOString().slice(0, 10); }
+
+    function shiftIso(iso, days) {
+      const d = new Date(iso + "T12:00:00");
+      d.setDate(d.getDate() + days);
+      return d.toISOString().slice(0, 10);
+    }
+
+    function weekDates() {
+      const t = today();
+      return Array.from({ length: 7 }, (_, i) => shiftIso(t, i));
+    }
+
+    const STEP_CHOICES = [
+      [{ id: "did", e: "✨", l: "Did it" }, { id: "skip", e: "🌙", l: "Not tonight" }],
+      [
+        { id: "awful", e: "😩" },
+        { id: "low", e: "😕" },
+        { id: "ok", e: "😐" },
+        { id: "good", e: "🙂" },
+        { id: "great", e: "😌" },
+      ],
+      [
+        { id: "keep", e: "❤️", l: "Helped" },
+        { id: "mid", e: "😐", l: "Meh" },
+        { id: "nah", e: "👋", l: "Not for me" },
+      ],
+    ];
+
+    function stepId(step) { return step.id || step.label; }
+
+    function dayKeys(plan, iso) {
+      return (plan.steps || []).map((s) => iso + ":" + stepId(s));
+    }
+
+    function dayCounts(plan, iso) {
+      const keys = dayKeys(plan, iso);
+      const n = keys.length;
+      const done = keys.filter((k) => plan.checks && plan.checks[k]).length;
+      const status = !n || done === 0 ? "none" : done === n ? "full" : "partial";
+      return { done, n, status };
+    }
+
+    function streak(plan) {
+      let iso = today();
+      if (dayCounts(plan, iso).status !== "full") iso = shiftIso(iso, -1);
+      let n = 0;
+      while (dayCounts(plan, iso).status === "full") {
+        n += 1;
+        iso = shiftIso(iso, -1);
+        if (n > 400) break;
+      }
+      return n;
+    }
+
+    function weekPct(plan) {
+      let done = 0;
+      let total = 0;
+      weekDates().forEach((iso) => {
+        const c = dayCounts(plan, iso);
+        done += c.done;
+        total += c.n;
+      });
+      return total ? Math.round((done / total) * 100) : 0;
+    }
+
+    function weekday(iso) {
+      return "SMTWTFS"[new Date(iso + "T12:00:00").getDay()];
+    }
+
+    function save() { localStorage.setItem(KEY, JSON.stringify(ritual)); }
+    function savePlans() { localStorage.setItem(PLAN_KEY, JSON.stringify(plans)); }
+
+    function closeDrawer() {
+      document.getElementById("sidebar").classList.remove("open");
+      document.getElementById("scrim").classList.remove("show");
+    }
+
+    function showChat() {
+      openHandle = null;
+      inspectDay = null;
+      document.getElementById("chat").hidden = false;
+      document.getElementById("detail").hidden = true;
+      document.getElementById("detail").replaceChildren();
+      document.getElementById("chatToggle").hidden = true;
+    }
+
+    function showDetail(handle) {
+      const plan = plans.find((p) => p.handle === handle);
+      if (!plan) {
+        showChat();
+        renderPlans();
+        return;
+      }
+      openHandle = handle;
+      inspectDay = today();
+      document.getElementById("chat").hidden = true;
+      document.getElementById("detail").hidden = false;
+      document.getElementById("chatToggle").hidden = false;
+      closeDrawer();
+      renderDetail(handle);
+    }
+
+    function upsertPlan(plan) {
+      if (!plan || !plan.handle) return;
+      const existing = plans.find((p) => p.handle === plan.handle);
+      const next = {
+        handle: plan.handle,
+        title: plan.title || plan.product_title || "Daily ritual",
+        description: plan.description || "",
+        product_title: plan.product_title || "",
+        image: plan.image || "",
+        steps: plan.steps || [],
+        checks: existing ? existing.checks || {} : {},
+      };
+      if (existing) {
+        const i = plans.findIndex((p) => p.handle === plan.handle);
+        plans[i] = { ...existing, ...next, checks: existing.checks || {} };
+      } else {
+        plans.unshift(next);
+      }
+      savePlans();
+      renderPlans();
+      if (openHandle === plan.handle) renderDetail(openHandle);
+    }
+
+    function renderPlans() {
+      const box = document.getElementById("plans");
+      const toggle = document.getElementById("plansToggle");
+      toggle.textContent = plans.length ? `Plans (${plans.length})` : "Plans";
+      box.replaceChildren();
+      if (!plans.length) {
+        const empty = document.createElement("p");
+        empty.className = "plans-empty";
+        empty.textContent = "When you start a plan, it lives here. Tap it for a 7-day streak.";
+        box.appendChild(empty);
+        return;
+      }
+      plans.forEach((plan) => {
+        const todayCount = dayCounts(plan, today());
+        const nStreak = streak(plan);
+        const card = document.createElement("article");
+        card.className = "plan-card";
+        card.tabIndex = 0;
+        card.addEventListener("click", () => {
+          inspectDay = today();
+          showDetail(plan.handle);
+        });
+        card.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            card.click();
+          }
+        });
+        const head = document.createElement("header");
+        const img = document.createElement("img");
+        img.src = plan.image || "";
+        img.alt = plan.product_title || plan.title;
+        const titles = document.createElement("div");
+        const h3 = document.createElement("h3");
+        h3.textContent = plan.title;
+        const sub = document.createElement("div");
+        sub.className = "desc";
+        sub.textContent = plan.product_title || "";
+        titles.append(h3, sub);
+        head.append(img, titles);
+        const meta = document.createElement("div");
+        meta.className = "meta-row";
+        const streakEl = document.createElement("span");
+        streakEl.className = "streak-mini";
+        streakEl.textContent = nStreak ? nStreak + "-day streak" : "Start a streak";
+        const frac = document.createElement("span");
+        frac.textContent = `${todayCount.done}/${todayCount.n} today`;
+        const drop = document.createElement("button");
+        drop.type = "button";
+        drop.className = "drop";
+        drop.textContent = "Remove";
+        drop.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const gone = plan.handle;
+          plans = plans.filter((p) => p.handle !== gone);
+          savePlans();
+          renderPlans();
+          if (openHandle === gone) showChat();
+        });
+        meta.append(streakEl, frac, drop);
+        card.append(head, meta);
+        box.appendChild(card);
+      });
+    }
+
+    function hideCelebrate() {
+      document.getElementById("celebrate").hidden = true;
+    }
+
+    function showCelebrate(n) {
+      const el = document.getElementById("celebrate");
+      document.getElementById("celebrateTitle").textContent = n <= 1 ? "Streak started" : n + "-day streak";
+      el.hidden = false;
+    }
+
+    function sparkles(around) {
+      if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const r = around.getBoundingClientRect();
+      for (let i = 0; i < 8; i++) {
+        const s = document.createElement("i");
+        s.className = "spark";
+        const ang = (i / 8) * Math.PI * 2;
+        s.style.left = r.left + r.width / 2 + "px";
+        s.style.top = r.top + r.height / 2 + "px";
+        s.style.setProperty("--dx", Math.cos(ang) * 36 + "px");
+        s.style.setProperty("--dy", Math.sin(ang) * 36 + "px");
+        document.body.appendChild(s);
+        setTimeout(() => s.remove(), 700);
+      }
+    }
+
+    function renderDetail(handle) {
+      const plan = plans.find((p) => p.handle === handle);
+      const box = document.getElementById("detail");
+      if (!plan) {
+        showChat();
+        renderPlans();
+        return;
+      }
+      if (!inspectDay || inspectDay > today()) inspectDay = today();
+      const pct = weekPct(plan);
+      const nStreak = streak(plan);
+      const circ = 2 * Math.PI * 34;
+      const offset = circ * (1 - pct / 100);
+      const isToday = inspectDay === today();
+
+      box.replaceChildren();
+      const back = document.createElement("button");
+      back.type = "button";
+      back.className = "detail-back";
+      back.textContent = "← Chat";
+      back.addEventListener("click", showChat);
+      const h3 = document.createElement("h3");
+      h3.style.fontFamily = '"Cormorant Garamond", Georgia, serif';
+      h3.style.fontSize = "24px";
+      h3.style.fontStyle = "italic";
+      h3.style.margin = "0 0 4px";
+      h3.textContent = plan.title;
+      const desc = document.createElement("p");
+      desc.className = "desc";
+      desc.style.margin = "0 0 12px";
+      desc.style.fontSize = "12px";
+      desc.style.color = "var(--muted)";
+      desc.textContent = plan.description || plan.product_title || "";
+
+      const ringWrap = document.createElement("div");
+      ringWrap.className = "ring-wrap";
+      ringWrap.innerHTML = `<svg class="ring" viewBox="0 0 80 80" aria-hidden="true">
+        <circle class="track" cx="40" cy="40" r="34"></circle>
+        <circle class="arc" cx="40" cy="40" r="34" stroke-dasharray="${circ.toFixed(1)}" stroke-dashoffset="${circ.toFixed(1)}"></circle>
+      </svg>`;
+      const copy = document.createElement("div");
+      copy.className = "ring-copy";
+      const pctEl = document.createElement("strong");
+      pctEl.textContent = "0%";
+      const streakEl = document.createElement("span");
+      streakEl.className = nStreak ? "hot" : "";
+      streakEl.textContent = nStreak ? nStreak + "-day streak" : "No streak yet — check today";
+      copy.append(pctEl, streakEl);
+      ringWrap.appendChild(copy);
+
+      const week = document.createElement("div");
+      week.className = "week";
+      weekDates().forEach((iso) => {
+        const st = dayCounts(plan, iso).status;
+        const future = iso > today();
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "day-dot " + st + (iso === today() ? " today" : "") + (iso === inspectDay ? " on" : "") + (future ? " soon" : "");
+        btn.disabled = future;
+        btn.innerHTML = `<i>${new Date(iso + "T12:00:00").getDate()}</i><small>${weekday(iso)}</small>`;
+        if (!future) {
+          btn.addEventListener("click", () => {
+            inspectDay = iso;
+            renderDetail(handle);
+          });
+        }
+        week.appendChild(btn);
+      });
+
+      const steps = document.createElement("div");
+      steps.className = "detail-steps";
+      const when = document.createElement("p");
+      when.className = "desc";
+      when.style.margin = "0 0 6px";
+      when.style.fontSize = "11px";
+      when.style.letterSpacing = "0.08em";
+      when.style.textTransform = "uppercase";
+      when.style.color = "var(--blush)";
+      when.textContent = "Today";
+      steps.appendChild(when);
+      (plan.steps || []).forEach((step, i) => {
+        const id = stepId(step);
+        const key = inspectDay + ":" + id;
+        const choices = STEP_CHOICES[i] || STEP_CHOICES[0];
+        const cur = plan.checks && plan.checks[key];
+        const row = document.createElement("div");
+        row.className = "step" + (isToday ? "" : " locked");
+        const q = document.createElement("span");
+        q.className = "q";
+        q.textContent = step.label || step;
+        const picks = document.createElement("div");
+        picks.className = "picks" + (choices.length >= 5 ? " slide" : "");
+        choices.forEach((opt) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "pick" + (cur === opt.id ? " on" : "");
+          btn.disabled = !isToday;
+          btn.innerHTML = opt.l ? `<b>${opt.e}</b><small>${opt.l}</small>` : `<b>${opt.e}</b>`;
+          btn.addEventListener("click", () => {
+            const before = streak(plan);
+            const wasFull = dayCounts(plan, today()).status === "full";
+            plan.checks = plan.checks || {};
+            if (cur === opt.id) delete plan.checks[key];
+            else plan.checks[key] = opt.id;
+            savePlans();
+            const nowFull = dayCounts(plan, today()).status === "full";
+            renderDetail(handle);
+            renderPlans();
+            if (!wasFull && nowFull) {
+              const ring = document.querySelector("#detail .ring");
+              if (ring) {
+                ring.classList.add("burst");
+                sparkles(ring);
+              }
+              if (streak(plan) > before) {
+                const hot = document.querySelector("#detail .ring-copy .hot, #detail .ring-copy span");
+                if (hot) hot.classList.add("hot");
+              }
+              showCelebrate(streak(plan));
+            }
+          });
+          picks.appendChild(btn);
+        });
+        row.append(q, picks);
+        steps.appendChild(row);
+      });
+
+      box.append(back, h3, desc, ringWrap, week, steps);
+      requestAnimationFrame(() => {
+        const arc = box.querySelector(".arc");
+        if (arc) arc.style.strokeDashoffset = String(offset);
+        if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          pctEl.textContent = pct + "%";
+          return;
+        }
+        const start = performance.now();
+        const tick = (now) => {
+          const t = Math.min(1, (now - start) / 450);
+          pctEl.textContent = Math.round(pct * t) + "%";
+          if (t < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    }
+
+    function startPlan(plan) {
+      upsertPlan(plan);
+      inspectDay = today();
+      showDetail(plan.handle);
+      addMsg("assistant", "It's in My plans. Open it for the 7-day streak and check in each day. Shopping notes, not a prescription.");
+    }
+
+    function renderTray() {
+      pinsEl.replaceChildren();
+      ritual.forEach((p) => {
+        const img = document.createElement("img");
+        img.src = p.image;
+        img.alt = p.title;
+        pinsEl.appendChild(img);
+      });
+      const n = ritual.length;
+      const total = ritual.reduce((s, p) => s + Number(p.price || 0), 0);
+      tray.classList.toggle("empty", n === 0);
+      clearBtn.hidden = n === 0;
+      trayHint.textContent = n
+        ? `${n} pinned · $${total.toFixed(2)}`
+        : "Nothing pinned yet — finish the check-in.";
+      document.querySelectorAll(".heart").forEach((btn) => {
+        btn.classList.toggle("on", ritual.some((p) => p.handle === btn.dataset.handle));
+        btn.setAttribute("aria-pressed", btn.classList.contains("on") ? "true" : "false");
+      });
+    }
+
+    function fly(from, to) {
+      if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const a = from.getBoundingClientRect();
+      const b = to.getBoundingClientRect();
+      const ghost = from.cloneNode(true);
+      ghost.className = "ghost";
+      ghost.style.left = a.left + "px";
+      ghost.style.top = a.top + "px";
+      ghost.style.width = a.width + "px";
+      ghost.style.height = a.height + "px";
+      document.body.appendChild(ghost);
+      requestAnimationFrame(() => {
+        const dx = b.left + 12 - a.left;
+        const dy = b.top + 8 - a.top;
+        ghost.style.transform = `translate(${dx}px, ${dy}px) scale(0.35)`;
+        ghost.style.opacity = "0.2";
+      });
+      setTimeout(() => ghost.remove(), 560);
+    }
+
+    function togglePin(product, heartBtn, imgEl) {
+      const i = ritual.findIndex((p) => p.handle === product.handle);
+      if (i >= 0) {
+        ritual.splice(i, 1);
+      } else {
+        if (ritual.length >= 5) ritual.shift();
+        ritual.push(product);
+        if (imgEl) fly(imgEl, tray);
+        heartBtn.classList.add("on");
+        if (lastPlan && lastPlan.handle === product.handle) upsertPlan(lastPlan);
+      }
+      save();
+      renderTray();
+    }
+
+    function addMsg(role, text, extraClass) {
+      const el = document.createElement("div");
+      el.className = `msg ${role}` + (extraClass ? ` ${extraClass}` : "");
+      el.textContent = text;
+      log.appendChild(el);
+      el.scrollIntoView({ behavior: "smooth", block: "end" });
+      return el;
+    }
+
+    function addChoices(choices) {
+      if (!choices || !choices.length) return;
+      const wrap = document.createElement("div");
+      wrap.className = "chips";
+      choices.forEach((label) => {
+        const chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = "chip";
+        chip.textContent = label;
+        chip.addEventListener("click", () => {
+          wrap.querySelectorAll(".chip").forEach((c) => { c.disabled = true; });
+          send(label);
+        });
+        wrap.appendChild(chip);
+      });
+      log.appendChild(wrap);
+      wrap.scrollIntoView({ behavior: "smooth", block: "end" });
+    }
+
+    function addKit(data) {
+      if (data.ritual_name) {
+        const name = document.createElement("div");
+        name.className = "kit-name";
+        name.textContent = data.ritual_name;
+        log.appendChild(name);
+      }
+      const beats = (data.beats && data.beats.length)
+        ? data.beats
+        : (data.products || []).map((p) => ({ when: "Pin this", product: p }));
+      if (!beats.length) return;
+      const wrap = document.createElement("div");
+      wrap.className = "beats";
+      beats.forEach((beat) => {
+        const p = beat.product || beat;
+        const row = document.createElement("div");
+        row.className = "beat";
+        const when = document.createElement("div");
+        when.className = "when";
+        when.textContent = beat.when || "Pin this";
+        const card = document.createElement("div");
+        card.className = "card";
+        const img = document.createElement("img");
+        img.src = p.image;
+        img.alt = p.title;
+        const meta = document.createElement("div");
+        meta.className = "meta";
+        const h3 = document.createElement("h3");
+        h3.textContent = p.title;
+        const why = document.createElement("div");
+        why.className = "why";
+        why.textContent = p.why || "";
+        const actions = document.createElement("div");
+        actions.className = "row";
+        const price = document.createElement("div");
+        price.className = "price";
+        price.textContent = p.price ? "$" + p.price : "";
+        const shop = document.createElement("a");
+        shop.className = "shop";
+        shop.href = p.url;
+        shop.target = "_blank";
+        shop.rel = "noreferrer";
+        shop.textContent = "Shop";
+        const heart = document.createElement("button");
+        heart.type = "button";
+        heart.className = "heart" + (ritual.some((x) => x.handle === p.handle) ? " on" : "");
+        heart.dataset.handle = p.handle;
+        heart.setAttribute("aria-label", "Pin to ritual");
+        heart.setAttribute("aria-pressed", heart.classList.contains("on") ? "true" : "false");
+        heart.innerHTML = heartSvg;
+        heart.addEventListener("click", () => togglePin(p, heart, img));
+        const start = document.createElement("button");
+        start.type = "button";
+        start.className = "start-plan";
+        start.textContent = "Start daily plan";
+        start.addEventListener("click", () => {
+          if (lastPlan) startPlan(lastPlan);
+        });
+        actions.append(price, shop, start, heart);
+        meta.append(h3, why, actions);
+        card.append(img, meta);
+        row.append(when, card);
+        wrap.appendChild(row);
+      });
+      log.appendChild(wrap);
+      wrap.scrollIntoView({ behavior: "smooth", block: "end" });
+    }
+
+    async function send(text) {
+      const q = (text || "").trim();
+      if (!q) return;
+      if (q.toLowerCase() === "start this plan" && lastPlan) {
+        addMsg("user", q);
+        history.push({ role: "user", content: q });
+        startPlan(lastPlan);
+        return;
+      }
+      if (q.toLowerCase() === "not now") {
+        addMsg("user", q);
+        history.push({ role: "user", content: q });
+        addMsg("assistant", "No rush. Heart it later if you want it in My plans.");
+        return;
+      }
+      const welcome = document.getElementById("welcome");
+      if (welcome) welcome.remove();
+      input.value = "";
+      addMsg("user", q);
+      const payloadHistory = history.slice();
+      const btn = form.querySelector("button");
+      btn.disabled = true;
+      const typing = document.createElement("div");
+      typing.className = "msg assistant typing";
+      typing.innerHTML = "<i></i><i></i><i></i>";
+      log.appendChild(typing);
+      typing.scrollIntoView({ behavior: "smooth", block: "end" });
+      try {
+        const res = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: q, history: payloadHistory }),
+        });
+        const data = await res.json();
+        typing.remove();
+        if (!res.ok) {
+          addMsg("assistant", data.detail || "Planner is unavailable.", "error");
+          return;
+        }
+        addMsg("assistant", data.reply);
+        if (data.ready) {
+          lastPlan = data.plan || null;
+          addKit(data);
+          addChoices(data.choices && data.choices.length ? data.choices : ["Start this plan", "Not now"]);
+        } else addChoices(data.choices);
+        history.push({ role: "user", content: q });
+        history.push({ role: "assistant", content: data.reply });
+      } catch (err) {
+        typing.remove();
+        addMsg("assistant", "Could not reach the planner. Is the server running?", "error");
+      } finally {
+        btn.disabled = false;
+        input.focus();
+      }
+    }
+
+    const sidebar = document.getElementById("sidebar");
+    const scrim = document.getElementById("scrim");
+    document.getElementById("celebrateOk").addEventListener("click", hideCelebrate);
+    document.getElementById("celebrate").addEventListener("click", (e) => {
+      if (e.target.id === "celebrate") hideCelebrate();
+    });
+    document.getElementById("chatToggle").addEventListener("click", showChat);
+    document.getElementById("plansToggle").addEventListener("click", () => {
+      sidebar.classList.add("open");
+      scrim.classList.add("show");
+    });
+    scrim.addEventListener("click", () => {
+      sidebar.classList.remove("open");
+      scrim.classList.remove("show");
+    });
+    clearBtn.addEventListener("click", () => {
+      ritual = [];
+      save();
+      renderTray();
+    });
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      send(input.value);
+    });
+    renderTray();
+    renderPlans();
+  </script>
+</body>
+</html>

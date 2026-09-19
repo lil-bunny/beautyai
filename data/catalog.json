@@ -1,0 +1,990 @@
+{
+  "store": "https://gloweupstudio.com",
+  "source": "https://gloweupstudio.com/products.json",
+  "product_count": 15,
+  "collections": [
+    {
+      "id": 303378038893,
+      "title": "Coming Soon...",
+      "handle": "baby-love",
+      "description_text": "Coming soon...",
+      "products_count": 0
+    },
+    {
+      "id": 303377481837,
+      "title": "Hormone Balance",
+      "handle": "hormone-support",
+      "description_text": "",
+      "products_count": 2
+    },
+    {
+      "id": 304962863213,
+      "title": "Nourish and Radiance",
+      "handle": "skincare-beauty",
+      "description_text": "Clean, hormone-safe products for glowing skin at every phase.",
+      "products_count": 4
+    },
+    {
+      "id": 304962928749,
+      "title": "The Ritual",
+      "handle": "teas-botanicals",
+      "description_text": "",
+      "products_count": 2
+    },
+    {
+      "id": 303377154157,
+      "title": "The GloweUp Edit",
+      "handle": "curated-favorites",
+      "description_text": "",
+      "products_count": 4
+    },
+    {
+      "id": 302333263981,
+      "title": "The Vitality",
+      "handle": "healthcare-example-products",
+      "description_text": "",
+      "products_count": 7
+    }
+  ],
+  "products": [
+    {
+      "id": 7946675552365,
+      "title": "Activated Charcoal Detox Salt Scrub",
+      "handle": "activated-charcoal-detox-salt-scrub",
+      "url": "https://gloweupstudio.com/products/activated-charcoal-detox-salt-scrub",
+      "vendor": "Little Seed Farm",
+      "collections": [
+        "Nourish and Radiance"
+      ],
+      "description_html": "Purify your skin with our Activated Charcoal Detox Scrub! Activated coconut charcoal safely draws out skin impurities, helps heal troubled skin and reduces inflammation, while coconut oil and a blend of essential oils heal and moisturize your skin. Dead Sea Salt delivers essential minerals to your body, gently sloughing away dead skin cells. \n\n\nNet Wt. 9oz | 255g (sold by weight, not by volume)\n\n",
+      "description_text": "Purify your skin with our Activated Charcoal Detox Scrub! Activated coconut charcoal safely draws out skin impurities, helps heal troubled skin and reduces inflammation, while coconut oil and a blend of essential oils heal and moisturize your skin. Dead Sea Salt delivers essential minerals to your body, gently sloughing away dead skin cells. Net Wt. 9oz | 255g (sold by weight, not by volume)",
+      "price": "21.99",
+      "compare_at_price": null,
+      "available": true,
+      "sku": null,
+      "variants": [
+        {
+          "id": 43860372553837,
+          "title": "Default Title",
+          "sku": null,
+          "price": "21.99",
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/281a27f5587d41c00ebb5b334f5da8fe808b27395f57d2cd3249d65346b72105.png?v=1767828806",
+          "local": "images/activated-charcoal-detox-salt-scrub/1.png",
+          "width": 2048,
+          "height": 2048,
+          "position": 1,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/1532079187_ed27e7b2-dc7a-4844-b834-1b05a5f51d08.jpg?v=1767828806",
+          "local": "images/activated-charcoal-detox-salt-scrub/2.jpg",
+          "width": 750,
+          "height": 536,
+          "position": 2,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/1532079187.jpg?v=1767828805",
+          "local": "images/activated-charcoal-detox-salt-scrub/3.jpg",
+          "width": 750,
+          "height": 536,
+          "position": 3,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7946675388525,
+      "title": "Binder Plus+ | Heavy Metal Detox & Gut Cleanse Powder (60g)",
+      "handle": "binder-plus-heavy-metal-detox-gut-cleanse-powder-60g",
+      "url": "https://gloweupstudio.com/products/binder-plus-heavy-metal-detox-gut-cleanse-powder-60g",
+      "vendor": "Life Gardening Tools",
+      "collections": [
+        "The Vitality"
+      ],
+      "description_html": "Binder Plus+ is a gentle but powerful detox powder featuring 11 targeted ingredients that help bind and eliminate heavy metals, mold toxins, parasite byproducts, microplastics, and digestive waste.\n\nFormulated with mineral-rich clays, fibers, and botanicals, this travel-friendly 60g jar is perfect for beginners or anyone looking to maintain regular cleansing and gut balance.\n\n🔍 Ingredient Highlights\n\n * \nZeolite &amp; Bentonite Clay – Mineral clays that trap toxins and soothe digestion.\n\n * \nActivated Charcoal – Binds unwanted compounds and supports gut balance.\n\n * \nPsyllium Husk &amp; Apple Pectin – Fibers that sweep bound toxins and nourish the microbiome.\n\n * \nDiatomaceous Earth (DE) – Silica-rich scrub that disrupts biofilm and supports gut integrity.\n\n * \nChitosan – Marine fiber that binds fat-soluble toxins, plastics, and mycotoxins.\n\n * \nGuar Gum – Soluble fiber that improves binding and supports gut flora.\n\n * \nSea Moss  – Mineral-rich additions for trace elements, fulvic acid, and energy.\n\n * \nSlippery Elm",
+      "description_text": "Binder Plus+ is a gentle but powerful detox powder featuring 11 targeted ingredients that help bind and eliminate heavy metals, mold toxins, parasite byproducts, microplastics, and digestive waste. Formulated with mineral-rich clays, fibers, and botanicals, this travel-friendly 60g jar is perfect for beginners or anyone looking to maintain regular cleansing and gut balance. 🔍 Ingredient Highlights * Zeolite & Bentonite Clay – Mineral clays that trap toxins and soothe digestion. * Activated Charcoal – Binds unwanted compounds and supports gut balance. * Psyllium Husk & Apple Pectin – Fibers that sweep bound toxins and nourish the microbiome. * Diatomaceous Earth (DE) – Silica-rich scrub that disrupts biofilm and supports gut integrity. * Chitosan – Marine fiber that binds fat-soluble toxins, plastics, and mycotoxins. * Guar Gum – Soluble fiber that improves binding and supports gut flora. * Sea Moss – Mineral-rich additions for trace elements, fulvic acid, and energy. * Slippery Elm",
+      "price": "22.00",
+      "compare_at_price": null,
+      "available": true,
+      "sku": "BINDER-PLUS-60G",
+      "variants": [
+        {
+          "id": 43860372389997,
+          "title": "Default Title",
+          "sku": "BINDER-PLUS-60G",
+          "price": "22.00",
+          "compare_at_price": null,
+          "available": true,
+          "grams": 198,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/60ea02b87e45923f2cd58aa76b1f9d682048279098dcc1f4e1ea261abe76fed2.png?v=1767828796",
+          "local": "images/binder-plus-heavy-metal-detox-gut-cleanse-powder-60g/1.png",
+          "width": 613,
+          "height": 545,
+          "position": 1,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/2b67495fccb8464220adc12ce53d747fe12430944576b192e36dd552cb08e036.png?v=1767828797",
+          "local": "images/binder-plus-heavy-metal-detox-gut-cleanse-powder-60g/2.png",
+          "width": 829,
+          "height": 545,
+          "position": 2,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/ae6c41a58fbebc803517d34825769e6cfd317f7987c72d9ff7323056de67d568.png?v=1767828797",
+          "local": "images/binder-plus-heavy-metal-detox-gut-cleanse-powder-60g/3.png",
+          "width": 1920,
+          "height": 544,
+          "position": 3,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/091d73655795662bc27cd635c70188da78a68fa7bafcd7c06f27bd4154be7527.png?v=1767828797",
+          "local": "images/binder-plus-heavy-metal-detox-gut-cleanse-powder-60g/4.png",
+          "width": 677,
+          "height": 545,
+          "position": 4,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/aad87ac2c5b2733a4a314412e4cdef773f345800ceab1ae9494ebaa38edbeccc.png?v=1767828797",
+          "local": "images/binder-plus-heavy-metal-detox-gut-cleanse-powder-60g/5.png",
+          "width": 544,
+          "height": 544,
+          "position": 5,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7946675585133,
+      "title": "Cortisol Cleanup, Tincture",
+      "handle": "cortisol-cleanup-tincture",
+      "url": "https://gloweupstudio.com/products/cortisol-cleanup-tincture",
+      "vendor": "Evergreen Apothecary",
+      "collections": [
+        "The GloweUp Edit",
+        "The Vitality"
+      ],
+      "description_html": "Our Cortisol Cleanup Tincture is an essential product for every household. Life is full of stress, and we could all use a little extra support! For those unfamiliar, cortisol is a stress response hormone. Elevated cortisol levels can adversely affect the hippocampus, which is responsible for processing experiences into memories, and the amygdala, which is involved in fear responses and anxiety.\n\nVarious factors can influence cortisol levels, including diet, sugar intake, physical activity, and sleep. This herbal blend is specially formulated to help your body adapt to both immediate and long-term stress. It contains Tulsi, an herb that scientific studies have shown to positively impact the hippocampus and aid in its restoration to a healthy state.\n*These statements have not been evaluated by the FDA, statements are not meant to cure, prevent, diagnose or treat diseases* \nComes in a 2oz amber glass dropper bottle\nUse 1 dropper full 3-4 times a day, depending on your needs. ",
+      "description_text": "Our Cortisol Cleanup Tincture is an essential product for every household. Life is full of stress, and we could all use a little extra support! For those unfamiliar, cortisol is a stress response hormone. Elevated cortisol levels can adversely affect the hippocampus, which is responsible for processing experiences into memories, and the amygdala, which is involved in fear responses and anxiety. Various factors can influence cortisol levels, including diet, sugar intake, physical activity, and sleep. This herbal blend is specially formulated to help your body adapt to both immediate and long-term stress. It contains Tulsi, an herb that scientific studies have shown to positively impact the hippocampus and aid in its restoration to a healthy state. *These statements have not been evaluated by the FDA, statements are not meant to cure, prevent, diagnose or treat diseases* Comes in a 2oz amber glass dropper bottle Use 1 dropper full 3-4 times a day, depending on your needs.",
+      "price": "30.00",
+      "compare_at_price": null,
+      "available": true,
+      "sku": null,
+      "variants": [
+        {
+          "id": 43860372586605,
+          "title": "Default Title",
+          "sku": null,
+          "price": "30.00",
+          "compare_at_price": null,
+          "available": true,
+          "grams": 142,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/a55fddfd25e60b3b9c2841153061402aaa7537372484611c2b7c2b5bf58d07aa.jpg?v=1767828807",
+          "local": "images/cortisol-cleanup-tincture/1.jpg",
+          "width": 1600,
+          "height": 1600,
+          "position": 1,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/c7b2b1d1c155bb6d0e6a8c3bfb82e5b2ebddebdf571290d1ba6703df2976674c.jpg?v=1767828808",
+          "local": "images/cortisol-cleanup-tincture/2.jpg",
+          "width": 1600,
+          "height": 1600,
+          "position": 2,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/a7c269391eaf8159c0f58395437e0df6ffd64b34a949a60db020f6ce5f580372.jpg?v=1767828808",
+          "local": "images/cortisol-cleanup-tincture/3.jpg",
+          "width": 1600,
+          "height": 1600,
+          "position": 3,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/dcee3ee964a9f7b3317d53aa012efd8901cd1a3fc8271e08d32b6c3043ce4609.jpg?v=1767828808",
+          "local": "images/cortisol-cleanup-tincture/4.jpg",
+          "width": 1600,
+          "height": 1600,
+          "position": 4,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7946675519597,
+      "title": "Debloat Variety Pack - Orange, Peach, Mango",
+      "handle": "debloat-variety-pack-orange-peach-mango",
+      "url": "https://gloweupstudio.com/products/debloat-variety-pack-orange-peach-mango",
+      "vendor": "Promix",
+      "collections": [
+        "The GloweUp Edit",
+        "The Vitality"
+      ],
+      "description_html": "Reduces bloating and cramping\nPromotes healing of gut barrier\nAids detoxification and immunity",
+      "description_text": "Reduces bloating and cramping Promotes healing of gut barrier Aids detoxification and immunity",
+      "price": "30.00",
+      "compare_at_price": null,
+      "available": true,
+      "sku": "debloat-variety-stick pack-12ct",
+      "variants": [
+        {
+          "id": 43860372521069,
+          "title": "Default Title",
+          "sku": "debloat-variety-stick pack-12ct",
+          "price": "30.00",
+          "compare_at_price": null,
+          "available": true,
+          "grams": 57,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/44a24eec341dc6dc140832da5f564d555d2f400abf2eeb277f4de370f98f1865.png?v=1767828804",
+          "local": "images/debloat-variety-pack-orange-peach-mango/1.png",
+          "width": 1200,
+          "height": 1500,
+          "position": 1,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/0b905edc7c8d69a87dcb9c29ff2d1ef844d08ba81f4a5044b6edbf6d3a0aef7b.png?v=1767828805",
+          "local": "images/debloat-variety-pack-orange-peach-mango/2.png",
+          "width": 1200,
+          "height": 1500,
+          "position": 2,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/d7eda678ad8a33e768cbf7acd145b42c7ca0ac70116658ac12c7066330c2c9ac.png?v=1767828804",
+          "local": "images/debloat-variety-pack-orange-peach-mango/3.png",
+          "width": 1200,
+          "height": 1500,
+          "position": 3,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/16385a77c51082c6d4b60921b41226ecdf410d54bd111a7e98c1bab882edc581.png?v=1767828804",
+          "local": "images/debloat-variety-pack-orange-peach-mango/4.png",
+          "width": 1200,
+          "height": 1500,
+          "position": 4,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7848484438125,
+      "title": "Elevate Mushroom Gummies (5) / Vegan Supplement / Mood",
+      "handle": "elevate-mushroom-gummies-5-vegan-supplement-mood",
+      "url": "https://gloweupstudio.com/products/elevate-mushroom-gummies-5-vegan-supplement-mood",
+      "vendor": "Microjoy",
+      "collections": [
+        "The GloweUp Edit",
+        "The Vitality"
+      ],
+      "description_html": "<p>Jellies of joy! This blend of mood boosting, high potency organic Lion’s Mane mushrooms and L-Theanine combines with feel-good 5-HTP and nervous system regulating B6 to promote a clear, calm mind and a more radiant spirit. Strawberry flavored, 5 gummies per resealable stand up pouch  Vegan, handmade No fake flavors or colors, real sugar Nootropic and adaptogenic ingredients Mental health support.</p>",
+      "description_text": "Jellies of joy! This blend of mood boosting, high potency organic Lion’s Mane mushrooms and L-Theanine combines with feel-good 5-HTP and nervous system regulating B6 to promote a clear, calm mind and a more radiant spirit. Strawberry flavored, 5 gummies per resealable stand up pouch Vegan, handmade No fake flavors or colors, real sugar Nootropic and adaptogenic ingredients Mental health support.",
+      "price": "8.00",
+      "compare_at_price": null,
+      "available": true,
+      "sku": null,
+      "variants": [
+        {
+          "id": 43554916368493,
+          "title": "Default Title",
+          "sku": null,
+          "price": "8.00",
+          "compare_at_price": null,
+          "available": true,
+          "grams": 57,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/09fd0dc27d9091eed9e7f6932112853a112df56ab0f268feba18f88e2815607a.jpg?v=1760673299",
+          "local": "images/elevate-mushroom-gummies-5-vegan-supplement-mood/1.jpg",
+          "width": 2000,
+          "height": 2000,
+          "position": 1,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/187c0aad962d4cde5b96ac51fbb01232c30c5adc1c4519749d832d33b4a6705a.jpg?v=1760673300",
+          "local": "images/elevate-mushroom-gummies-5-vegan-supplement-mood/2.jpg",
+          "width": 2000,
+          "height": 2000,
+          "position": 2,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/797f240032a76e80064eabe3bfde144f9cf1fd1fe76ada46251bdd4e51898dff.jpg?v=1760673300",
+          "local": "images/elevate-mushroom-gummies-5-vegan-supplement-mood/3.jpg",
+          "width": 1000,
+          "height": 1000,
+          "position": 3,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/e54d56e01913445f3cef969f1a3d69402e38d3a5ce76392872abf74ba7be4786.jpg?v=1760673300",
+          "local": "images/elevate-mushroom-gummies-5-vegan-supplement-mood/4.jpg",
+          "width": 3024,
+          "height": 3538,
+          "position": 4,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7848484143213,
+      "title": "ENTHUSIASM / Daily Dose Drops",
+      "handle": "enthusiasm-daily-dose-drops",
+      "url": "https://gloweupstudio.com/products/enthusiasm-daily-dose-drops",
+      "vendor": "Lunar Logic Wild Apothecary",
+      "collections": [
+        "The Vitality"
+      ],
+      "description_html": "A raw Cacao-based formulation enhanced with brain-boosting medicinal Mushrooms, elevating superherbs, nootropics, and adaptogens to liberate the mind of old ways of thinking, awaken the spirit, and invigorate the body.\n\nA Daily Dose for Curious Minds:\n+ Mental clarity &amp; focus\n+ Energy &amp; stamina\n+ Immune &amp; stress support \n+ Wakefulness &amp; brain function",
+      "description_text": "A raw Cacao-based formulation enhanced with brain-boosting medicinal Mushrooms, elevating superherbs, nootropics, and adaptogens to liberate the mind of old ways of thinking, awaken the spirit, and invigorate the body. A Daily Dose for Curious Minds: + Mental clarity & focus + Energy & stamina + Immune & stress support + Wakefulness & brain function",
+      "price": "36.00",
+      "compare_at_price": null,
+      "available": true,
+      "sku": "ll-dailydose-enthusiasm-2oz",
+      "variants": [
+        {
+          "id": 43554912043117,
+          "title": "2oz Glass Pipette with Glass Dropper",
+          "sku": "ll-dailydose-enthusiasm-2oz",
+          "price": "36.00",
+          "compare_at_price": null,
+          "available": true,
+          "grams": 57,
+          "option1": "2oz Glass Pipette with Glass Dropper",
+          "option2": null,
+          "option3": null
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/6b05e02887fced0afddf5d199deffd1cc6b6409ce325df8562879ef54807e49b.jpg?v=1760673292",
+          "local": "images/enthusiasm-daily-dose-drops/1.jpg",
+          "width": 1467,
+          "height": 1467,
+          "position": 1,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/f98959a0043a38eb0acba02a93020966b9c924e7b9c8ba4bfe2ecaddccdc746e.jpg?v=1760673293",
+          "local": "images/enthusiasm-daily-dose-drops/2.jpg",
+          "width": 3085,
+          "height": 3085,
+          "position": 2,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/baf1c451e3d2a6cc39ed0c7278474708ee33d8f4ca5ad1aa865345d5a4027495.jpg?v=1760673293",
+          "local": "images/enthusiasm-daily-dose-drops/3.jpg",
+          "width": 1793,
+          "height": 2266,
+          "position": 3,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7946675454061,
+      "title": "Grapefruit Lemon Deodorant Cream",
+      "handle": "grapefruit-lemon-deodorant-cream",
+      "url": "https://gloweupstudio.com/products/grapefruit-lemon-deodorant-cream",
+      "vendor": "Little Seed Farm",
+      "collections": [
+        "Nourish and Radiance"
+      ],
+      "description_html": "<p> Put your hands in the air and jump for joy! Our aluminum and baking soda-free deodorant, made from nourishing and gentle organic ingredients, is here! Stay smelling fresh all day long, naturally. How: Gently rub a pea sized amount (see image) into clean, damp skin with your fingertips. Where: You can use it (and it works!) anywhere else on your body that needs it. Just be sure to patch test before using on extra sensitive areas (like around your intimate bits) to be sure you don’t have any sensitivities to the essential oils in the scent you use. Or, pick up a jar of unscented and dab away! Net Wt. 2.4oz | 68g (sold by weight, not by volume)</p>",
+      "description_text": "Put your hands in the air and jump for joy! Our aluminum and baking soda-free deodorant, made from nourishing and gentle organic ingredients, is here! Stay smelling fresh all day long, naturally. How: Gently rub a pea sized amount (see image) into clean, damp skin with your fingertips. Where: You can use it (and it works!) anywhere else on your body that needs it. Just be sure to patch test before using on extra sensitive areas (like around your intimate bits) to be sure you don’t have any sensitivities to the essential oils in the scent you use. Or, pick up a jar of unscented and dab away! Net Wt. 2.4oz | 68g (sold by weight, not by volume)",
+      "price": "13.99",
+      "compare_at_price": null,
+      "available": true,
+      "sku": "5727",
+      "variants": [
+        {
+          "id": 43860372455533,
+          "title": "Default Title",
+          "sku": "5727",
+          "price": "13.99",
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/a5ff76fc91806542fb5716cc9bec48e4903184b542cb453094dd2bda6fe7f37c.png?v=1767828800",
+          "local": "images/grapefruit-lemon-deodorant-cream/1.png",
+          "width": 2048,
+          "height": 2048,
+          "position": 1,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/bc8c18c1d7f6ce2071d58cdf2b0b67ba5c869f94762e91f840364b245a83bc3e.png?v=1767828800",
+          "local": "images/grapefruit-lemon-deodorant-cream/2.png",
+          "width": 2000,
+          "height": 2000,
+          "position": 2,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/1532361728.jpg?v=1767828800",
+          "local": "images/grapefruit-lemon-deodorant-cream/3.jpg",
+          "width": 1024,
+          "height": 732,
+          "position": 3,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/f719895a3394f7a643fef0c9cd02ebd60a17680596c748a47306a8d1d2847f1a.png?v=1767828803",
+          "local": "images/grapefruit-lemon-deodorant-cream/4.png",
+          "width": 2048,
+          "height": 2048,
+          "position": 4,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/00feea2b93061adfbd5701922dfcbc553608dde1e004cc4edd62042061bcda37_33554d5f-09f1-49a8-aa54-b6d14683bc59.png?v=1767828804",
+          "local": "images/grapefruit-lemon-deodorant-cream/5.png",
+          "width": 2048,
+          "height": 2048,
+          "position": 5,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7946675617901,
+      "title": "Hormone Harmony | Balance PMS, PMDD, Mood & Post-Pill Health",
+      "handle": "hormone-harmony-balance-pms-pmdd-mood-post-pill-health",
+      "url": "https://gloweupstudio.com/products/hormone-harmony-balance-pms-pmdd-mood-post-pill-health",
+      "vendor": "Wild Woman Herbal Apothecary",
+      "collections": [
+        "Hormone Balance"
+      ],
+      "description_html": "Take the path to holistic well-being with our Hormone Harmony Tincture, your solution to hormonal balance. This expertly crafted blend not only restores equilibrium but also nurtures your overall health. Let go of irregular cycles, mood swings, and low libido as you embrace a harmonious body rhythm. Experience heightened fertility, increased energy, and vibrant vitality with every dose. Rooted in ancient wisdom and powered by nature, Hormone Harmony empowers you to take charge of your hormonal health, paving the way for a life with energy, health, and inner harmony.\n\nBenefits:\n- Regulated Hormone Levels\n- Balanced Moon Cycle, Mood, and Libido\n- Enhanced Reproductive Health\n- Stabilized Mood\n- Revitalized Vitality\n- Improved Liver Function\n- Mitigated Stress Impact\n- Natural Normalization After Oral Contraceptives or During Stress",
+      "description_text": "Take the path to holistic well-being with our Hormone Harmony Tincture, your solution to hormonal balance. This expertly crafted blend not only restores equilibrium but also nurtures your overall health. Let go of irregular cycles, mood swings, and low libido as you embrace a harmonious body rhythm. Experience heightened fertility, increased energy, and vibrant vitality with every dose. Rooted in ancient wisdom and powered by nature, Hormone Harmony empowers you to take charge of your hormonal health, paving the way for a life with energy, health, and inner harmony. Benefits: - Regulated Hormone Levels - Balanced Moon Cycle, Mood, and Libido - Enhanced Reproductive Health - Stabilized Mood - Revitalized Vitality - Improved Liver Function - Mitigated Stress Impact - Natural Normalization After Oral Contraceptives or During Stress",
+      "price": "30.00",
+      "compare_at_price": null,
+      "available": true,
+      "sku": "4540",
+      "variants": [
+        {
+          "id": 43860372619373,
+          "title": "Default Title",
+          "sku": "4540",
+          "price": "30.00",
+          "compare_at_price": null,
+          "available": true,
+          "grams": 113,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/510c8f9e274c041ed5aec4c7fed4e4838ea9d9bd5839235ed936e27aa96ba254.jpg?v=1767828808",
+          "local": "images/hormone-harmony-balance-pms-pmdd-mood-post-pill-health/1.jpg",
+          "width": 1080,
+          "height": 1080,
+          "position": 1,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/3f0c0317720c99a5f881f6e120b81eab9921d96e202f346e3ca6128333aa65f7.jpg?v=1767828810",
+          "local": "images/hormone-harmony-balance-pms-pmdd-mood-post-pill-health/2.jpg",
+          "width": 1080,
+          "height": 1080,
+          "position": 2,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/03863c7e82983a56703b870b161fb68b848b337d72c68952050f0e7a00b91727.jpg?v=1767828810",
+          "local": "images/hormone-harmony-balance-pms-pmdd-mood-post-pill-health/3.jpg",
+          "width": 1080,
+          "height": 1080,
+          "position": 3,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/af11383ca9b114e0aeba4dbe5bd9cd0037b5319482a3fdc1fbd56a6d4457e3d7.jpg?v=1767828810",
+          "local": "images/hormone-harmony-balance-pms-pmdd-mood-post-pill-health/4.jpg",
+          "width": 1080,
+          "height": 1080,
+          "position": 4,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/9dc638edb751dbc8de42fe0348d74af0ed699601bded24d551be5ff868f44dd8.jpg?v=1767828810",
+          "local": "images/hormone-harmony-balance-pms-pmdd-mood-post-pill-health/5.jpg",
+          "width": 1080,
+          "height": 1080,
+          "position": 5,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/4c734cbd47e6bdb61de01223828f540d2354cbad41d922df34b894a3bb5ce61f.jpg?v=1767828810",
+          "local": "images/hormone-harmony-balance-pms-pmdd-mood-post-pill-health/6.jpg",
+          "width": 1080,
+          "height": 1080,
+          "position": 6,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/24aad8163bf68b61dbc1142dcd090a136b24e3caf0e11af21457599e7af52266.jpg?v=1767828809",
+          "local": "images/hormone-harmony-balance-pms-pmdd-mood-post-pill-health/7.jpg",
+          "width": 1080,
+          "height": 1080,
+          "position": 7,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/0b7a6800dc422ec62180205f33a38a17e323d65049e43497db0bd6e12ebf7256.jpg?v=1767828810",
+          "local": "images/hormone-harmony-balance-pms-pmdd-mood-post-pill-health/8.jpg",
+          "width": 1080,
+          "height": 1080,
+          "position": 8,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/15d7ff44a0b0fa82c5041433d10afc964f0061e52272cae3c2e3582b37020020.jpg?v=1767828810",
+          "local": "images/hormone-harmony-balance-pms-pmdd-mood-post-pill-health/9.jpg",
+          "width": 1080,
+          "height": 1080,
+          "position": 9,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/0a760b140a530d175f1cfe9c800597714465b4bcaecea14709ab0210e164337c.jpg?v=1767828810",
+          "local": "images/hormone-harmony-balance-pms-pmdd-mood-post-pill-health/10.jpg",
+          "width": 1080,
+          "height": 1080,
+          "position": 10,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/cdb95bbd1081ceb73ee849036d3e2b4b37df01f3eeb7443efe5ce3445f61e733.jpg?v=1767828810",
+          "local": "images/hormone-harmony-balance-pms-pmdd-mood-post-pill-health/11.jpg",
+          "width": 1080,
+          "height": 1080,
+          "position": 11,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/411292aa86bbddad4748446c99e9c16316b6af25ef445631912d52bea367af0a.jpg?v=1767828810",
+          "local": "images/hormone-harmony-balance-pms-pmdd-mood-post-pill-health/12.jpg",
+          "width": 1080,
+          "height": 1080,
+          "position": 12,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/fd15f0473ee70b33994c89aad85666cab776e60e607e70c8df79ea040f6f4b64.jpg?v=1767828810",
+          "local": "images/hormone-harmony-balance-pms-pmdd-mood-post-pill-health/13.jpg",
+          "width": 1080,
+          "height": 1080,
+          "position": 13,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7848484274285,
+      "title": "Lymphatic and Autoimmune Support",
+      "handle": "lympha-stress-relief-lymphatic-and-autoimmune-support",
+      "url": "https://gloweupstudio.com/products/lympha-stress-relief-lymphatic-and-autoimmune-support",
+      "vendor": "The Medicinal Melange",
+      "collections": [
+        "The Ritual"
+      ],
+      "description_html": "<p>Support your body's natural defenses with this potent lymphatic and immune formula. Clinically-researched botanicals and nutrients work together to enhance lymph circulation, calm inflammation, and fortify immune resilience. Perfect for those managing autoimmune concerns or prioritizing preventative wellness. Clean, transparent ingredients designed with your cycle in mind.</p>\n<p>Herbalist Notes: - Flavor Profile: Neutral, Soft nutty aroma. - 50g of medicinal tea (1 Unit) will be about 62 servings. - Brewing Instructions: Steep 1 tbsp of loose tea leaves in 8 ounces of hot water. For a cold infusion, pour your hot infusion over ice. Caffeine Free.</p>",
+      "description_text": "Support your body's natural defenses with this potent lymphatic and immune formula. Clinically-researched botanicals and nutrients work together to enhance lymph circulation, calm inflammation, and fortify immune resilience. Perfect for those managing autoimmune concerns or prioritizing preventative wellness. Clean, transparent ingredients designed with your cycle in mind. Herbalist Notes: - Flavor Profile: Neutral, Soft nutty aroma. - 50g of medicinal tea (1 Unit) will be about 62 servings. - Brewing Instructions: Steep 1 tbsp of loose tea leaves in 8 ounces of hot water. For a cold infusion, pour your hot infusion over ice. Caffeine Free.",
+      "price": "25.00",
+      "compare_at_price": null,
+      "available": true,
+      "sku": "Tea-lym",
+      "variants": [
+        {
+          "id": 43554912731245,
+          "title": "Default Title",
+          "sku": "Tea-lym",
+          "price": "25.00",
+          "compare_at_price": null,
+          "available": true,
+          "grams": 50,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/942341e3dc32460b8597f33db3f2d99f15537f707603cefcbda9c00d42c14f49.jpg?v=1760673297",
+          "local": "images/lympha-stress-relief-lymphatic-and-autoimmune-support/1.jpg",
+          "width": 4472,
+          "height": 2981,
+          "position": 1,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7848484372589,
+      "title": "Magnesium Oil Spray Unscented",
+      "handle": "magnesium-oil-spray-unscented",
+      "url": "https://gloweupstudio.com/products/magnesium-oil-spray-unscented",
+      "vendor": "Manifest Wellness",
+      "collections": [
+        "Hormone Balance",
+        "The Vitality"
+      ],
+      "description_html": "<p>Magnesium Oil Spray Unscented Fast-absorbing magnesium oil spray designed to support relaxation, muscle recovery, and sleep quality. This unscented formula delivers bioavailable magnesium chloride directly through the skin, bypassing digestive limitations. Ideal for cycle-phase wellness routines when magnesium needs peak. Apply to clean skin on arms, legs, or torso—gentle enough for daily use. No fillers, no fragrance, pure mineral support for hormone-friendly self-care.</p>",
+      "description_text": "Magnesium Oil Spray Unscented Fast-absorbing magnesium oil spray designed to support relaxation, muscle recovery, and sleep quality. This unscented formula delivers bioavailable magnesium chloride directly through the skin, bypassing digestive limitations. Ideal for cycle-phase wellness routines when magnesium needs peak. Apply to clean skin on arms, legs, or torso—gentle enough for daily use. No fillers, no fragrance, pure mineral support for hormone-friendly self-care.",
+      "price": "24.00",
+      "compare_at_price": null,
+      "available": true,
+      "sku": "MOS04",
+      "variants": [
+        {
+          "id": 43554915778669,
+          "title": "Default Title",
+          "sku": "MOS04",
+          "price": "24.00",
+          "compare_at_price": null,
+          "available": true,
+          "grams": 283,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/94cda14a7a10eb18e830b8f4cdd27e56fe319fc6070b42fe6a82e0db1967d9a9.jpg?v=1760673297",
+          "local": "images/magnesium-oil-spray-unscented/1.jpg",
+          "width": 1024,
+          "height": 1536,
+          "position": 1,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7946675355757,
+      "title": "Oud & Rose Hand sanitizer gel",
+      "handle": "oud-rose-hand-sanitizer-gel",
+      "url": "https://gloweupstudio.com/products/oud-rose-hand-sanitizer-gel",
+      "vendor": "Nour Emporium",
+      "collections": [],
+      "description_html": "Indulge your hands with the luxurious 1oz Oud &amp; Rose hand sanitizer, conveniently equipped with a stylish keychain ring. Experience the ultimate germ-fighting goodness.",
+      "description_text": "Indulge your hands with the luxurious 1oz Oud & Rose hand sanitizer, conveniently equipped with a stylish keychain ring. Experience the ultimate germ-fighting goodness.",
+      "price": "8.00",
+      "compare_at_price": null,
+      "available": true,
+      "sku": null,
+      "variants": [
+        {
+          "id": 43860372357229,
+          "title": "Default Title",
+          "sku": null,
+          "price": "8.00",
+          "compare_at_price": null,
+          "available": true,
+          "grams": 57,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/WithHand.jpg?v=1769043374",
+          "local": "images/oud-rose-hand-sanitizer-gel/1.jpg",
+          "width": 1398,
+          "height": 1342,
+          "position": 1,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/Turkishcoffee.png?v=1769043374",
+          "local": "images/oud-rose-hand-sanitizer-gel/2.png",
+          "width": 906,
+          "height": 974,
+          "position": 2,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7848484241517,
+      "title": "Rose Chai Superbrew",
+      "handle": "feminism-rose-chai-superbrew",
+      "url": "https://gloweupstudio.com/products/feminism-rose-chai-superbrew",
+      "vendor": "Lunar Logic Wild Apothecary",
+      "collections": [
+        "The Ritual",
+        "The GloweUp Edit"
+      ],
+      "description_html": "Calm + Restoration + Connection\n\nA sensorial feast of rose petals and warm chai goodness softens the edges of the day and transports you to a place of deep relaxation and spirit connection. Sacred super herbs, earthy adaptogens, nootropics, and medicinal mushrooms blend seamlessly, removing barriers and blockages, allowing a higher state of consciousness worthy of this evening Superbrew.\n\nACTIONS\n+ Anxiety adaptogen support\n+ Promotes deep relaxation and rest\n+ Rejuvenating properties\n+ Immune system support\n+ Female tonic\n+ Hormone balance support\n+ Supports the nervous and digestive systems\n\nBrew it with hot water, mylk, add it to a smoothie, or even bulletproof it to make it your own. \n\nTESTER SIZE: 3 serving pouch.",
+      "description_text": "Calm + Restoration + Connection A sensorial feast of rose petals and warm chai goodness softens the edges of the day and transports you to a place of deep relaxation and spirit connection. Sacred super herbs, earthy adaptogens, nootropics, and medicinal mushrooms blend seamlessly, removing barriers and blockages, allowing a higher state of consciousness worthy of this evening Superbrew. ACTIONS + Anxiety adaptogen support + Promotes deep relaxation and rest + Rejuvenating properties + Immune system support + Female tonic + Hormone balance support + Supports the nervous and digestive systems Brew it with hot water, mylk, add it to a smoothie, or even bulletproof it to make it your own. TESTER SIZE: 3 serving pouch.",
+      "price": "56.00",
+      "compare_at_price": null,
+      "available": true,
+      "sku": "ll-superbrew-rosechai-30",
+      "variants": [
+        {
+          "id": 43554912698477,
+          "title": "30 Serving Pouch",
+          "sku": "ll-superbrew-rosechai-30",
+          "price": "56.00",
+          "compare_at_price": null,
+          "available": true,
+          "grams": 118,
+          "option1": "30 Serving Pouch",
+          "option2": null,
+          "option3": null
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/f688747c37f3ba05ec6775412b5874f8c2f9b057655661c7cce72dd4844b6f2b.jpg?v=1760673294",
+          "local": "images/feminism-rose-chai-superbrew/1.jpg",
+          "width": 2200,
+          "height": 1247,
+          "position": 1,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/35c6d810edc54f823c9ab7ff9d5a824320b6223b1ef87fb407c50a25be4cc7f1.jpg?v=1760673295",
+          "local": "images/feminism-rose-chai-superbrew/2.jpg",
+          "width": 1800,
+          "height": 1800,
+          "position": 2,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7946675486829,
+      "title": "Rosemary Patchouli Deodorant Cream",
+      "handle": "rosemary-patchouli-deodorant-cream",
+      "url": "https://gloweupstudio.com/products/rosemary-patchouli-deodorant-cream",
+      "vendor": "Little Seed Farm",
+      "collections": [
+        "Nourish and Radiance"
+      ],
+      "description_html": "<p>Put your hands in the air and jump for joy! Our aluminum and baking soda-free deodorant, made from nourishing and gentle organic ingredients, is here! Stay smelling fresh all day long, naturally. How: Gently rub a pea sized amount (see image) into clean, damp skin with your fingertips. Where: You can use it (and it works!) anywhere else on your body that needs it. Just be sure to patch test before using on extra sensitive areas (like around your intimate bits) to be sure you don’t have any sensitivities to the essential oils in the scent you use. Or, pick up a jar of unscented and dab away! Net Wt. 2.4oz | 68g (sold by weight, not by volume)</p>",
+      "description_text": "Put your hands in the air and jump for joy! Our aluminum and baking soda-free deodorant, made from nourishing and gentle organic ingredients, is here! Stay smelling fresh all day long, naturally. How: Gently rub a pea sized amount (see image) into clean, damp skin with your fingertips. Where: You can use it (and it works!) anywhere else on your body that needs it. Just be sure to patch test before using on extra sensitive areas (like around your intimate bits) to be sure you don’t have any sensitivities to the essential oils in the scent you use. Or, pick up a jar of unscented and dab away! Net Wt. 2.4oz | 68g (sold by weight, not by volume)",
+      "price": "13.99",
+      "compare_at_price": null,
+      "available": true,
+      "sku": "5741",
+      "variants": [
+        {
+          "id": 43860372488301,
+          "title": "Default Title",
+          "sku": "5741",
+          "price": "13.99",
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/dd26f67a0056f346064af88887da95b0390c882a20096787e8268ed700526e0f.png?v=1767828802",
+          "local": "images/rosemary-patchouli-deodorant-cream/1.png",
+          "width": 2048,
+          "height": 2048,
+          "position": 1,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/5876c1772b73e26ff2e8fefb5f5fbf21b0f18c886ea06fa8bb5826efe8e8688d.png?v=1767828802",
+          "local": "images/rosemary-patchouli-deodorant-cream/2.png",
+          "width": 2000,
+          "height": 2000,
+          "position": 2,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/1532458019.jpg?v=1767828802",
+          "local": "images/rosemary-patchouli-deodorant-cream/3.jpg",
+          "width": 1024,
+          "height": 732,
+          "position": 3,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/00feea2b93061adfbd5701922dfcbc553608dde1e004cc4edd62042061bcda37.png?v=1767828804",
+          "local": "images/rosemary-patchouli-deodorant-cream/4.png",
+          "width": 2048,
+          "height": 2048,
+          "position": 4,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/6d711a03134a6d99bd3d3d0ba3497d73aa349e95920246e055bcc643b6532a00.jpg?v=1767828802",
+          "local": "images/rosemary-patchouli-deodorant-cream/5.jpg",
+          "width": 4472,
+          "height": 2981,
+          "position": 5,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7848484569197,
+      "title": "Spring Chicken Muscle Rub",
+      "handle": "spring-chicken-muscle-rub",
+      "url": "https://gloweupstudio.com/products/spring-chicken-muscle-rub",
+      "vendor": "Sweet Grass Farm",
+      "collections": [
+        "The Vitality"
+      ],
+      "description_html": "Treat aching muscles and joints with our thoughtfully crafted muscle rub. Peppermint and cinnamon cassia leaf oil create a warming sensation while calendula’s anti-inflammatory properties tackle soreness and swelling.\n\nAll natural, plant based ingredients\nRelieves aches and pains in muscles and joints\nReusable 2oz glass jar with lid\nUse anywhere on the body\n\nIngredients: Canola oil, olive oil, beeswax, peppermint oil, cinnamon oil, calendula extract",
+      "description_text": "Treat aching muscles and joints with our thoughtfully crafted muscle rub. Peppermint and cinnamon cassia leaf oil create a warming sensation while calendula’s anti-inflammatory properties tackle soreness and swelling. All natural, plant based ingredients Relieves aches and pains in muscles and joints Reusable 2oz glass jar with lid Use anywhere on the body Ingredients: Canola oil, olive oil, beeswax, peppermint oil, cinnamon oil, calendula extract",
+      "price": "11.95",
+      "compare_at_price": null,
+      "available": true,
+      "sku": "9007",
+      "variants": [
+        {
+          "id": 43554919448685,
+          "title": "Default Title",
+          "sku": "9007",
+          "price": "11.95",
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/4354691dc8c6ebb56f0a2f0b9eca27f0cddd5a05afc4a8874930b364af69ca93.jpg?v=1760673301",
+          "local": "images/spring-chicken-muscle-rub/1.jpg",
+          "width": 2048,
+          "height": 2048,
+          "position": 1,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7946675421293,
+      "title": "Whipped Tallow Unscented (2 oz)",
+      "handle": "whipped-tallow-unscented-2-oz",
+      "url": "https://gloweupstudio.com/products/whipped-tallow-unscented-2-oz",
+      "vendor": "Softer Skin",
+      "collections": [
+        "Nourish and Radiance"
+      ],
+      "description_html": "\nOur Whipped Tallow Moisturizer for face and body is crafted from nutrient-rich, 100% grass-fed beef tallow, combined with sweet almond oil and high-quality arrowroot powder to provide a luxurious and effective skincare solution. \n\nOur natural formula penetrates deeply, offering intense hydration without the heavy, greasy residue typical of other tallow products. It leaves your skin with a long-lasting, healthy glow and a smooth, non-greasy finish.\n\nPerfect as a natural moisturizer for sensitive skin and dry skin, our balm is free from phthalates, parabens, and synthetic additives. Each jar is lovingly handcrafted in small batches, ensuring exceptional quality.\n\nSofterSkin Whipped Tallow Balm is also a gentle and effective solution for managing eczema, rosacea, and psoriasis.\n\n\nIngredients: 100% Grass-Fed Grass-Finished Beef Tallow, Cold Pressed Almond Oil, Arrow Root Powder\n\n**Product packaging has UPC barcode printed on for retailer convenience**",
+      "description_text": "Our Whipped Tallow Moisturizer for face and body is crafted from nutrient-rich, 100% grass-fed beef tallow, combined with sweet almond oil and high-quality arrowroot powder to provide a luxurious and effective skincare solution. Our natural formula penetrates deeply, offering intense hydration without the heavy, greasy residue typical of other tallow products. It leaves your skin with a long-lasting, healthy glow and a smooth, non-greasy finish. Perfect as a natural moisturizer for sensitive skin and dry skin, our balm is free from phthalates, parabens, and synthetic additives. Each jar is lovingly handcrafted in small batches, ensuring exceptional quality. SofterSkin Whipped Tallow Balm is also a gentle and effective solution for managing eczema, rosacea, and psoriasis. Ingredients: 100% Grass-Fed Grass-Finished Beef Tallow, Cold Pressed Almond Oil, Arrow Root Powder **Product packaging has UPC barcode printed on for retailer convenience**",
+      "price": "24.00",
+      "compare_at_price": null,
+      "available": true,
+      "sku": "shopify-ss-unscented-2oz-001",
+      "variants": [
+        {
+          "id": 43860372422765,
+          "title": "Default Title",
+          "sku": "shopify-ss-unscented-2oz-001",
+          "price": "24.00",
+          "compare_at_price": null,
+          "available": true,
+          "grams": 170,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/f6a77a0db19e9390f8b0ee6bfab80004ea3b715a3fa7e8673c4e86e5c82e929c.jpg?v=1767828798",
+          "local": "images/whipped-tallow-unscented-2-oz/1.jpg",
+          "width": 2400,
+          "height": 2400,
+          "position": 1,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/82ad6ff6072f2afc43b09d5ff1e63f6ed0d43549c57824de862fb680c5359732.png?v=1767828800",
+          "local": "images/whipped-tallow-unscented-2-oz/2.png",
+          "width": 2048,
+          "height": 2048,
+          "position": 2,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/8c8e797d300a8c2cc5564b90568f0b452a139b8879fa5c48b9195f62c0573085.png?v=1767828800",
+          "local": "images/whipped-tallow-unscented-2-oz/3.png",
+          "width": 2048,
+          "height": 2048,
+          "position": 3,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0662/4909/7325/files/261d7ee510ee6fdf95c2ed646a531257d88618d9ef730d8a60068335088bb0c7.png?v=1767828800",
+          "local": "images/whipped-tallow-unscented-2-oz/4.png",
+          "width": 2048,
+          "height": 2048,
+          "position": 4,
+          "alt": null
+        }
+      ]
+    }
+  ]
+}
